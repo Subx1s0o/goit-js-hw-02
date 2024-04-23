@@ -1,8 +1,11 @@
 function formatMessage(message, maxLength) {
-  if (message.length <= maxLength) {
-    return message;
+  let trimmedMessage = message.trim();
+
+  if (trimmedMessage.length <= maxLength) {
+    return trimmedMessage;
   } else {
-    return message.slice(0, maxLength) + "...";
+    let truncatedMessage = trimmedMessage.slice(0, maxLength);
+    return truncatedMessage + "...";
   }
 }
 
